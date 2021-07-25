@@ -1,10 +1,12 @@
 import React from 'react'
-import Layout from '../../components/Layout'
+import DashboardLayout from '../../components/Layout'
 
-export default function Dashboard() {
+export default function Dashboard({ history }) {
     return (
-        <Layout>
-            Dashboard Page
-        </Layout>
+        <DashboardLayout>
+            <div onClick={() => history.push('/dashboard/user')}>
+                Users
+            </div>
+        </DashboardLayout>
     );
 }
