@@ -4,3 +4,16 @@ body, body * {
     padding: 0;
 }
 
+.btn {
+    padding: 5px 15px;
+    border-width: 1px;
+    margin: 2px 5px;
+}
+
+.btn-success {
+    background-color: rgb(140, 255, 146);
+}
+
+.btn-danger {
+    background-color: red;
+}

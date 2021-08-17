@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import DashboardLayout from '../../components/Layout';
+import DashboardLayout from '../../../components/DashboardLayout';
 import { Link } from 'react-router-dom';
+import Styles from '../../../styles/admin/model.module.css'
 
 export default function User({ authtoken: authToken }) {
     const [users, setUsers] = useState([]);
@@ -18,13 +19,24 @@ export default function User({ authtoken: authToken }) {
             }
         }
         fetchUsers(config);
-    }, [])
+    }, [authToken])
     return (
         <DashboardLayout>
             {users.map((eachUser) => (
-                <div>
+                <div key={eachUser.id} className={Styles.modelItem}>
                     <Link to={`/dashboard/user/${eachUser.id}`}><span>{eachUser.username}</span></Link>
-
+                    <div>
+                        <Link to={`/dashboard/user/${eachUser.id}`}>
+                            <button className={'btn' + ' btn-success'}>
+                                Edit
+                            </button>
+                        </Link>
+                        <Link to={`/dashboard/user/${eachUser.id}`}>
+                            <button className={'btn' + ' btn-danger'}>
+                                Delete
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             ))}
         </DashboardLayout>

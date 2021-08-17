@@ -1,0 +1,14 @@
+.modelItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.modelItem:nth-child(odd) {
+    background-color: azure;
+}
+
+.modelItem:nth-child(even) {
+    background-color: rgb(151, 151, 151);
+}

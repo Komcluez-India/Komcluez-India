@@ -10,8 +10,8 @@ import Login from './admin/Login';
 import Dashboard from './admin/Dashboard';
 import PrivateRoute from '../routes/PrivateRoute';
 import NotFound from './NotFound';
-import User from './admin/User';
-import EditUser from './admin/EditUser';
+import User from './admin/user/User';
+import EditUser from './admin/user/EditUser';
 
 export default function App() {
     return (
